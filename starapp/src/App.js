@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Address from './Address.js';
+import Calculator from './Calculator.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>
+        Star are Awesome!
+      </p>
+      <Address name="Naomi Stephenson" planet="Earth" galaxy="Milky Way" />
+      <Address name="Doctor Who" planet="Galafray" galaxy="?" />
+      <Address name="Goofy" planet="Pluto" galaxy="Milky Way" />
+      <Address name="Teal'c" planet="Chulak" galaxy="Andromeda" />
     </div>
   );
 }
