@@ -1,4 +1,4 @@
-function Addition(){
+function DiceRoll(){
     let a = Math.floor(Math.random()*6);
     let b = Math.floor(Math.random()*6);
     let c = a + b;
@@ -15,4 +15,4 @@ function Addition(){
     );
 };
 
-export default Addition;
+export default DiceRoll;
