@@ -1,6 +1,3 @@
-import Address from "./Address.js";
-import Calculator from "./Calculator.js";
-import PaySlip from "./PaySlip.js";
 import Exam from "./Exam.js";
 import "./App.css";
 
