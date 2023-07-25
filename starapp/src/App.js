@@ -2,9 +2,10 @@
 // import Address from "./Address.js";
 // import Exam from "./Exam.js";
 // import Accent from "./Accent.js";
-import Dobble from "./Dobble.js";
-import FilterNames from "./FilterNames.js";
-import Employees from "./Employees.js";
+// import Dobble from "./Dobble.js";
+// import FilterNames from "./FilterNames.js";
+// import Employees from "./Employees.js";
+import Event from "./Event.js";
 import "./App.css";
 
 function App() {
@@ -54,13 +55,16 @@ function App() {
           {/* <Accent>Welcome to the House of Fun!</Accent> */}
       </div>
       <div id = "Doubling all Array Values">
-        <Dobble/>
+        {/* <Dobble/> */}
       </div>
       <div id = "Filter family Names">
         {/* <FilterNames/> */}
       </div>
       <div id = "Salary Information">
         {/* <Employees/> */}
+      </div>
+      <div id = "Use State Change Button">
+        <Event/>
       </div>
     </div>
   );
