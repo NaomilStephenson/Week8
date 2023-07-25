@@ -42,7 +42,7 @@ function Exam(props){
             <hr/>
             <strong>Total Marks: </strong>{total}
             <br/>
-            {percentage}%
+            Average Score: {percentage}%
             <br/>
             <strong>You have: </strong>{pass}
             <br/>
