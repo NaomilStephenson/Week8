@@ -17,11 +17,15 @@ function FilterNames(){
         };
     };
 
+    let names = family.map(getFirstName);
+    let females = family.filter(getFemales);
+    let femaleNames = females.map(getFirstName);
+
     return (
         <>
-        {family.map(getFirstName)}
+        {names}
         <br/>
-        {family.filter(getFemales)}
+        {femaleNames}
         </>
     );
 };

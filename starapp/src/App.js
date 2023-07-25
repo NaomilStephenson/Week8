@@ -2,8 +2,8 @@
 // import Address from "./Address.js";
 // import Exam from "./Exam.js";
 // import Accent from "./Accent.js";
-// import Dobble from "./Dobble.js"; // - Not Working
-import FilterNames from "./FilterNames.js"; // - Not Working
+import Dobble from "./Dobble.js";
+import FilterNames from "./FilterNames.js";
 import Employees from "./Employees.js";
 import "./App.css";
 
@@ -54,13 +54,13 @@ function App() {
           {/* <Accent>Welcome to the House of Fun!</Accent> */}
       </div>
       <div id = "Doubling all Array Values">
-        {/* <Dobble/> */}
+        <Dobble/>
       </div>
       <div id = "Filter family Names">
-        <FilterNames/>
+        {/* <FilterNames/> */}
       </div>
       <div id = "Salary Information">
-        <Employees/>
+        {/* <Employees/> */}
       </div>
     </div>
   );

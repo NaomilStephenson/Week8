@@ -1,5 +1,5 @@
 function Dobble(){
-    let numbers = [1,2,3,4];
+    let numbers = (1,2,3,4);
     let doubleNumbers = numbers.map(multiple);
 
     function multiple(value){
@@ -9,9 +9,9 @@ function Dobble(){
 
     return (
         <>
-            {numbers}
+            {numbers.length}
             <br/>
-            {doubleNumbers}
+            {doubleNumbers[1]}
         </>
     );
 };
