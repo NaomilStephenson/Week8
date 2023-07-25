@@ -2,24 +2,27 @@
 // import Address from "./Address.js";
 // import Exam from "./Exam.js";
 // import Accent from "./Accent.js";
+// import Dobble from "./Dobble.js"; // - Not Working
+import FilterNames from "./FilterNames.js"; // - Not Working
+import Employees from "./Employees.js";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-        <div id = "Dice Roll">
+      <div id = "Dice Roll">
             {/* <DiceRoll/>
             <DiceRoll/>
             <DiceRoll/>
             <DiceRoll/> */}
-        </div>
-        <div id = "Galactic Address Book">
+      </div>
+      <div id = "Galactic Address Book">
           {/* <p>Star are Awesome!</p>
           <Address name="Naomi Stephenson" planet="Earth" galaxy="Milky Way" />
           <Address name="Doctor Who" planet="Galafray" galaxy="?" />
           <Address name="Goofy" planet="Pluto" galaxy="Milky Way" />
           <Address name="Teal'c" planet="Chulak" galaxy="Andromeda" /> */}
-          </div>
+      </div>
       <div id = "ExamResults">
           {/* <table>
             <th colspan="10"><h1>Exam Results</h1></th>
@@ -46,11 +49,19 @@ function App() {
               </td>
             </tr>
           </table> */}
-          </div>
+      </div>
       <div id = "Accent Formatting">
           {/* <Accent>Welcome to the House of Fun!</Accent> */}
       </div>
-
+      <div id = "Doubling all Array Values">
+        {/* <Dobble/> */}
+      </div>
+      <div id = "Filter family Names">
+        <FilterNames/>
+      </div>
+      <div id = "Salary Information">
+        <Employees/>
+      </div>
     </div>
   );
 };
