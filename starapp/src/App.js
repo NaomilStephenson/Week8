@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <table>
-        <th colspan="9"><h1>Exam Results</h1></th>
+        <th colspan="10"><h1>Exam Results</h1></th>
         <tr>
+          <td width="10"></td>
           <td>
             <Exam name="Andy" physics="80" chemistry="64" biology="55" mathematics="65" english="62"/>
           </td>
