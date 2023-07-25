@@ -4,50 +4,48 @@ function Results(props){
     let biology = 0;
     let mathematics = 0;
     let english = 0;
-        physics = props.Physics;
-        chemistry = props.Chemistry;
-        biology = props.biology;
-        mathematics = props.mathematics;
-        english = props.english;
+        physics = parseInt(props.physics);
+        chemistry = parseInt(props.chemistry);
+        biology = parseInt(props.biology);
+        mathematics = parseInt(props.mathematics);
+        english = parseInt(props.english);
     let total = physics + chemistry + biology + mathematics + english;
-    let percentage = total / 5 * 100;
+    let percentage = Math.floor(total / 5);
     let pass;
-    switch(percentage){
-        case ()>=90):
-            pass = "A+";
-        case (>=80 && <90):
-            pass = "A";
-        case (>=70 && <80):
-            pass = "B";
-        case (>=60 && <70):
-            pass = "C";
-        case (>=40 && <60):
-            pass = "Pass";
-        case (<70):
-            pass = "Fail";
-    }
-
+    if ( percentage >= 90 ){
+        pass = "A+";
+    } else if ( percentage >= 80 && percentage < 90 ){
+        pass = "A";
+    } else if (percentage >= 70 && percentage < 80 ){
+        pass = "B";
+    } else if (percentage >= 60 && percentage < 70 ){
+        pass = "C";
+    } else if (percentage >= 40 && percentage < 60 ){
+        pass = "Passed";
+    } else {
+        pass = "Failed";
+    };
     return(
         <div>
-            <strong>Name:</strong>{props.name}
+            <strong>Name: </strong>{props.name}
             <br/>
-            Physics:{physics}
+            Physics: {physics}
             <br/>
-            Chemistry:{chemistry}
+            Chemistry: {chemistry}
             <br/>
-            Biology:{biology}
+            Biology: {biology}
             <br/>
-            Maths:{mathematics}
+            Maths: {mathematics}
             <br/>
-            English:{english}
+            English: {english}
             <br/>
             <hr/>
             <br/>
-            <strong>Total Marks:</strong>{total}
+            <strong>Total Marks: </strong>{total}
             <br/>
             {percentage}%
             <br/>
-            <strong>You have:</strong>{pass}
+            <strong>You have: </strong>{pass}
             <br/>
             <br/>
         </div>
