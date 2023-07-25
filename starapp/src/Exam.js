@@ -1,4 +1,4 @@
-function Results(props){
+function Exam(props){
     let physics = 0;
     let chemistry = 0;
     let biology = 0;
@@ -29,18 +29,17 @@ function Results(props){
         <div>
             <strong>Name: </strong>{props.name}
             <br/>
-            Physics: {physics}
+            Physics: {physics}%
             <br/>
-            Chemistry: {chemistry}
+            Chemistry: {chemistry}%
             <br/>
-            Biology: {biology}
+            Biology: {biology}%
             <br/>
-            Maths: {mathematics}
+            Maths: {mathematics}%
             <br/>
-            English: {english}
+            English: {english}%
             <br/>
             <hr/>
-            <br/>
             <strong>Total Marks: </strong>{total}
             <br/>
             {percentage}%
@@ -51,4 +50,4 @@ function Results(props){
         </div>
     );
 };
-export default Results;
+export default Exam;
