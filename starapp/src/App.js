@@ -5,7 +5,8 @@
 // import Dobble from "./Dobble.js";
 // import FilterNames from "./FilterNames.js";
 // import Employees from "./Employees.js";
-import Event from "./Event.js";
+// import Event from "./Event.js";
+import School from "./School.js";
 import "./App.css";
 
 function App() {
@@ -64,7 +65,10 @@ function App() {
         {/* <Employees/> */}
       </div>
       <div id = "Use State Change Button">
-        <Event/>
+        {/* <Event/> */}
+      </div>
+      <div id = "Add to Array using React Button">
+        <School/>
       </div>
     </div>
   );
