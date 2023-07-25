@@ -10,7 +10,7 @@ function School(){
         alert(subjects.length);
         console.log(subjects);
     };
-    let [subject,addSubject]=useState(subjects)
+    let [subject,addSubject]=useState(subjects);
     return(
         <>
             <input type="button" value="New Lesson" onclick={insertSubject}/>
