@@ -1,13 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import DiceRoll from "./DiceRoll.js";
+import FilterNames from "./FilterNames.js";
+import Employees from "./Employees.js";
+import Event from "./Event.js";
+import School from "./School.js";
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <h1>React Training Demos</h1>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li><Link to="/diceroll">Dice Roll</Link></li>       
+          <li><Link to="/filternames">Filter Names</Link></li>
+          <li><Link to="/employees">Employees</Link></li>
+          <li><Link to="/event">Event</Link></li>
+          <li><Link to="/school">School</Link></li>
+        </ul>
+      </nav>
+      <Routes>
+          <Route path = "/diceroll" element={<DiceRoll/>}/> 
+          <Route path = "/filternames" element={<FilterNames/>}/> 
+          <Route path = "/employees" element={<Employees/>}/> 
+          <Route path = "/event" element={<Event/>}/> 
+          <Route path = "/school" element={<School/>}/> 
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

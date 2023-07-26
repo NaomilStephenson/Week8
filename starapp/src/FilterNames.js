@@ -10,7 +10,7 @@ function FilterNames(){
     };
 
     function getFemales(record){
-        if(record.sex == "F"){
+        if(record.sex === "F"){
             return true;
         } else {
             return false;

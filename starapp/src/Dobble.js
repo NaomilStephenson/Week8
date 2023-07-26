@@ -3,15 +3,14 @@ function Dobble(){
     let doubleNumbers = nums.map(multiple);
 
     function multiple(value){
-        let newValue = value*2;
-        return newValue;
+        return value*2;
     };
 
     return (
         <>
             {nums.length}
             <br/>
-            {doubleNumbers[1]}
+            {doubleNumbers}
         </>
     );
 };
