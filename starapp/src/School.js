@@ -6,12 +6,12 @@ function School(){
         {Subject: "Science", Teacher: "Mr. Walker", Room: "S11"}
     ];
     function Add(){
-        subjects.push({Subject: "ICT", Teacher: "Mrs. Townsend", Room: "S15"});
-        AddSubject(subjects);
-        alert(subjects.length);
-        console.log(subjects);
+        AddNew((currentSubjects) => {
+            let newSubject = {Subject: "ICT", Teacher: "Mrs. Townsend", Room: "S15"};
+            return [...currentSubjects,newSubject];
+        });
     };
-    let [lesson,AddSubject]=useState(subjects);
+    let [lesson,AddNew]=useState(subjects);
     return(
         <>
             <input type="button" value="New Lesson" onclick={Add}/>
