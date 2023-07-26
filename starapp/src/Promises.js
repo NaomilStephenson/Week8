@@ -9,18 +9,18 @@ function Promises(){
         let responseData = response.json();
         responseData.then(displayData);
     };
-    function fetchData(entryID){
-        let address = "http://jsonplaceholder.typicode.com/" + toString(entryID) + "/comments";
+    function getData(){
+        let value = document.getElementById("selectedEntry").value;
+        let address = "http://jsonplaceholder.typicode.com/" + toString(value) + "/comments";
         let response = fetch(address);
     response.then(processResponse);
     };
-    fetchData(1);
     return(
         <>
             <h1> Data Entries from <strong>Json Placeholder API</strong></h1>
             <br/>
             <input type="number" placeholder="Enter Entry ID" id="selectedEntry"/>
-            <input type="button" value="Get Data" onclick={()=>fetchData(document.getElementById("selectedEntry").value)}/>
+            <input type="button" value="Get Data" onClick={getData}/>
 
             <table>
                 <th><td>ID</td><td>Name</td><td>email</td></th>

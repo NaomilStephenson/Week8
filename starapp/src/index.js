@@ -7,7 +7,7 @@ import FilterNames from "./FilterNames.js";
 import Employees from "./Employees.js";
 import Event from "./Event.js";
 import School from "./School.js";
-// import Promises from "./Promises.js";
+import Promises from "./Promises.js";
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,14 +16,16 @@ root.render(
     <h1>React Training Demos</h1>
     <BrowserRouter>
       <nav>
-        <ul>
-          <li><Link to="/diceroll">Dice Roll</Link></li>       
-          <li><Link to="/filternames">Filter Names</Link></li>
-          <li><Link to="/employees">Employees</Link></li>
-          <li><Link to="/event">Event</Link></li>
-          <li><Link to="/school">School</Link></li>
-          {/* <li><Link to="/promises">Promises</Link></li> */}
-        </ul>
+        <table>
+          <th>
+            <td padding="20"><Link to="/diceroll">Dice Roll</Link></td>
+            <td padding="20"><Link to="/filternames">Filter Names</Link></td>
+            <td padding="20"><Link to="/employees">Employees</Link></td>
+            <td padding="20"><Link to="/event">Event</Link></td>
+            <td padding="20"><Link to="/school">School</Link></td>
+            <td padding="20"><Link to="/promises">Promises</Link></td>
+          </th>
+        </table>
       </nav>
       <Routes>
           <Route path = "/diceroll" element={<DiceRoll/>}/> 
@@ -31,7 +33,7 @@ root.render(
           <Route path = "/employees" element={<Employees/>}/> 
           <Route path = "/event" element={<Event/>}/> 
           <Route path = "/school" element={<School/>}/> 
-          {/* <Route path = "/promises" element={<Promises/>}/>  */}
+          <Route path = "/promises" element={<Promises/>}/> 
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
