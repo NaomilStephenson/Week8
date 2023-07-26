@@ -6,12 +6,14 @@
 // import FilterNames from "./FilterNames.js";
 // import Employees from "./Employees.js";
 // import Event from "./Event.js";
-import School from "./School.js";
+// import School from "./School.js";
+import Promises from "./Promises.js";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <h1>This page has loaded</h1>
       <div id = "Dice Roll">
             {/* <DiceRoll/>
             <DiceRoll/>
@@ -68,7 +70,10 @@ function App() {
         {/* <Event/> */}
       </div>
       <div id = "Add to Array using React Button">
-        <School/>
+        {/* <School/> */}
+      </div>
+      <div id = "Promises & Callbacks upsing External API">
+        <Promises/>
       </div>
     </div>
   );
