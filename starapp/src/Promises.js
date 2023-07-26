@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
 function Promises(){
     let[records,assignRecord]=useState([]);
@@ -9,11 +9,18 @@ function Promises(){
         let responseData = response.json();
         responseData.then(displayData);
     };
-    let response = fetch('http://jsonplaceholder.typicode.com/comments');
+    function fetchData(entryID){
+        let address = "http://jsonplaceholder.typicode.com/" + toString(entryID) + "/comments";
+        let response = fetch(address);
     response.then(processResponse);
+    };
     return(
         <>
             <h1> Data Entries from <strong>Json Placeholder</strong></h1>
+            <br/>
+            <input type="number" placeholder="Enter Entry ID" id="selectedEntry"/>
+            <input type="button" value="Get Data" onclick={fetchData((document.getElementById="selectedEntry").value)}/>
+
             <table>
                 <th><td>ID</td><td>Name</td><td>email</td></th>
                 {
