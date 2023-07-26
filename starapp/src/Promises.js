@@ -14,12 +14,13 @@ function Promises(){
         let response = fetch(address);
     response.then(processResponse);
     };
+    fetchData(1);
     return(
         <>
             <h1> Data Entries from <strong>Json Placeholder API</strong></h1>
             <br/>
             <input type="number" placeholder="Enter Entry ID" id="selectedEntry"/>
-            <input type="button" value="Get Data" onclick={fetchData((document.getElementById="selectedEntry").value)}/>
+            <input type="button" value="Get Data" onclick={()=>fetchData(document.getElementById("selectedEntry").value)}/>
 
             <table>
                 <th><td>ID</td><td>Name</td><td>email</td></th>

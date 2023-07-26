@@ -73,7 +73,7 @@ function App() {
         {/* <School/> */}
       </div>
       <div id = "Promises & Callbacks upsing External API">
-        <Promises/>
+        {/* <Promises/> */}
       </div>
     </div>
   );

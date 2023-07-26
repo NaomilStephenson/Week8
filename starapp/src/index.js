@@ -7,6 +7,7 @@ import FilterNames from "./FilterNames.js";
 import Employees from "./Employees.js";
 import Event from "./Event.js";
 import School from "./School.js";
+// import Promises from "./Promises.js";
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,6 +22,7 @@ root.render(
           <li><Link to="/employees">Employees</Link></li>
           <li><Link to="/event">Event</Link></li>
           <li><Link to="/school">School</Link></li>
+          {/* <li><Link to="/promises">Promises</Link></li> */}
         </ul>
       </nav>
       <Routes>
@@ -29,6 +31,7 @@ root.render(
           <Route path = "/employees" element={<Employees/>}/> 
           <Route path = "/event" element={<Event/>}/> 
           <Route path = "/school" element={<School/>}/> 
+          {/* <Route path = "/promises" element={<Promises/>}/>  */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
