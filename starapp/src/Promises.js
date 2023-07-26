@@ -1,9 +1,7 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 function Promises(){
-
     let[records,assignRecord]=useState([]);
-
     function displayData(DataValues){
         assignRecord(DataValues);
     };
@@ -13,7 +11,6 @@ function Promises(){
     };
     let response = fetch('http://jsonplaceholder.typicode.com/comments');
     response.then(processResponse);
-
     return(
         <>
             <h1> Data Entries from <strong>Json Placeholder</strong></h1>
