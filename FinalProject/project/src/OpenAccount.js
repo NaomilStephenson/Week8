@@ -17,7 +17,7 @@ function OpenAccount(){
                 "name":document.getElementById("name").value,
                 "country":document.getElementById("country").value,
                 "accountType":type,
-            });
+            })
         };
         fetch('http://127.0.0.1:4000/CreateAccount', newApplication);
     };
@@ -37,10 +37,8 @@ function OpenAccount(){
                 </select>
                 <fieldset>
                     <legend>Account Type</legend>
-                    <label for="Current">Current</label>
-                    <input type="radio" name="account" id="Current" value="Current"/>
-                    <label for="Savings">Savings</label>
-                    <input type="radio" name="account" id="Savings" value="Savings"/>
+                    Current <input type="radio" name="account" id="Current" value="Current"/>
+                    Savings <input type="radio" name="account" id="Savings" value="Savings"/>
                 </fieldset>
 
                 <br />

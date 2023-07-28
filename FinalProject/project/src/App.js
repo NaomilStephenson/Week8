@@ -1,7 +1,8 @@
 import './App.css';
 // import EmployeeManager from './EmployeeManager';
 // import Employees from './Employees';
-import OpenAccount from 'OpenAccount';
+import OpenAccount from './OpenAccount';
+import Accounts from './Accounts';
 
 function App(){
     return(
@@ -10,6 +11,7 @@ function App(){
             {/* <EmployeeManager/>
             <Employees/> */}
             <OpenAccount/>
+            <Accounts/>
         </div>
     );
 };
