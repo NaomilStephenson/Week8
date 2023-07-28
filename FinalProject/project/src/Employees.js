@@ -6,20 +6,16 @@ function Employees(){
     function getDataFromResponse(data){
         console.log(data);
         setRecords(data);
-        console.log("Sent to Records");
     };
 
     function processResponse(response){
         let jsonPromise = response.json();
         jsonPromise.then(getDataFromResponse);
-        console.log("Sent for Extraction");
     };
 
     function getEmployees(){
-        console.log("Fetching data");
         let responsePromise = fetch('http://localhost:4000/HR');
         responsePromise.then(processResponse)
-        console.log("Sent for Processing");
     };
     return(
         <>

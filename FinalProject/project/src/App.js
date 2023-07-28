@@ -1,12 +1,12 @@
 import './App.css';
+import EmployeeManager from './EmployeeManager';
 import Employees from './Employees';
-import NewEmployee from './NewEmployee';
 
 function App(){
     return(
         <div>
             <h1>Welcome to Nationwide HR Department</h1>
-            <NewEmployee/>
+            <EmployeeManager/>
             <Employees/>
         </div>
     );

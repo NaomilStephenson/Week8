@@ -36,9 +36,9 @@ server.get("/HR",(request,response) => {
 server.post("/HR/NewEmployee",(request,response) => {
     let empInsert = `insert into employees values(
         ${request.body.eno},
-        '${request.body.ename}',
+        ${request.body.ename},
         ${request.body.esal},
-        '${request.body.edept}'
+        ${request.body.edept}
         )`;
 
     db.query(empInsert,function(err,results){
