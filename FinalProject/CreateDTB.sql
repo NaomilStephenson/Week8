@@ -18,5 +18,12 @@ Values
 
 SELECT * FROM Employees;
 
+-- DROP TABLE Bank;
+CREATE TABLE IF NOT EXISTS Bank (
+  accno VARCHAR(5),
+  name VARCHAR(30)
+);
+
+
 -- enable External Access
 ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'root';

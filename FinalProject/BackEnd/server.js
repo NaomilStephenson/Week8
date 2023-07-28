@@ -40,8 +40,36 @@ server.post("/HR/NewEmployee",(request,response) => {
         ${request.body.esal},
         ${request.body.edept}
         )`;
-    
-server.post("/createAccount",(req,res)=>{
+    }
+);
+
+// db.query(empInsert,function(err,results){
+//     if(err){
+//         console.log(`The entry was not entered into the database. Error: ${err}`);
+//         response.json({"result":`Entry was not made into Database. Error: ${err}`});
+//     }else{
+//         console.log(`Entry addded to database`);
+//         response.json({"result":`Entry made into Database`});
+//     };
+// });
+
+server.get("/Accounts",(request,response) => {
+    db.query("Select * from Bank",function(err,results){
+        console.log(err);
+        response.json(results);
+        response.end();
+    });
+});
+
+server.get("/Apply",(request,response) => {
+    db.query("Select * from Bank",function(err,results){
+        console.log(err);
+        response.json(results);
+        response.end();
+    });
+});
+
+server.post("/CreateAccount",(req,res)=>{
  
     let name= req.body.name;
     let country = req.body.country.substring(0,1);
@@ -60,15 +88,4 @@ server.post("/createAccount",(req,res)=>{
             })
         };
     }) ;
-});
-
-    db.query(empInsert,function(err,results){
-        if(err){
-            console.log(`The entry was not entered into the database. Error: ${err}`);
-            response.json({"result":`Entry was not made into Database. Error: ${err}`});
-        }else{
-            console.log(`Entry addded to database`);
-            response.json({"result":`Entry made into Database`});
-        };
-    });
 });
