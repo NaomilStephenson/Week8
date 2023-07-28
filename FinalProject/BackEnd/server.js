@@ -5,12 +5,13 @@ server.listen((4000),() => {
     console.log(`Server is listening…`);
 });
 
-//Assign Body-Parser & Enable
+// Assign Body-Parser & Enable
 const bodyParser = require('body-parser');
 server.use(bodyParser.json());
+// Added to support extractiion data from HTML form
 server.use(bodyParser.urlencoded({ extended : true}));
 
-//Assign Cors & Enable
+// Assign Cors & Enable
 const cors = require('cors');
 server.use(cors());
 

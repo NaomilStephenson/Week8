@@ -1,21 +1,16 @@
 function NewEmployee(){
 
-    let num = document.getElementById("num");
-    let name = document.getElementById("name");
-    let sal = document.getElementById("sal");
-    let dept = document.getElementById("dept");
-
     let request = {
-        method: 'Post',
+        method: 'POST',
         headers: {'content-Type': 'application/json'},
         body: JSON.stringify({
-            "eno":num,
-            "ename":name,
-            "esal":sal,
-            "edept":dept
+            "eno":document.getElementById("num"),
+            "ename":document.getElementById("name"),
+            "esal":document.getElementById("sal"),
+            "edept":document.getElementById("dept")
         })
     };
-    fetch("http://127.0.0.1:4000/HR/NewEmployee", request);
+    fetch('http://127.0.0.1:4000/HR/NewEmployee', request);
 
     return(
         <>
@@ -26,7 +21,7 @@ function NewEmployee(){
                 Salary: <input type="number" name="Salary" id="sal"/>
                 Department: <input type="text" name="Department" id="dept"/>
                 <br />
-                <input type="button" value="New" onClick={()=>fetch()}/>
+                <input type="button" value="New" onClick={ () => fetch() }/>
             </form>
         </>
     )
