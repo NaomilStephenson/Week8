@@ -16,11 +16,11 @@ function NewEmployee(){
         <>
             <h1>Enter New Employee Employee</h1>
                 <form name="Enter New Employee Details">
-                Employee ID: <input type="number" name="Number" id="num"/>
+                {/* Employee ID: <input type="number" name="Number" id="num"/>
                 Name: <input type="text" name="Name" id="name"/>
                 Salary: <input type="number" name="Salary" id="sal"/>
                 Department: <input type="text" name="Department" id="dept"/>
-                <br />
+                <br /> */}
                 <input type="button" value="New" onClick={ () => fetch() }/>
             </form>
         </>
